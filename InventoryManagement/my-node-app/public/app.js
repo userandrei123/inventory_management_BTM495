@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             console.log('Success:', data);
             alert('Registration successful!');
-            // Optionally redirect the user or clear the form
+
             registerForm.reset();
         })
         .catch((error) => {

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bakery Inventory Management</title>
+<script>
+// Placeholder data for products and suppliers
+const products = {
+    "Flour": ["Supplier A", "Supplier B"],
+    "Sugar": ["Supplier C", "Supplier A"],
+    "Butter": ["Supplier B"]
+};
+
+// Function to update suppliers based on selected product
+function updateSuppliers() {
+    const productSelect = document.getElementById('product');
+    const supplierSelect = document.getElementById('supplier');
+    const selectedProduct = productSelect.value;
+    
+    // Clear previous supplier options
+    supplierSelect.innerHTML = '';
+
+    // Add new supplier options
+    products[selectedProduct].forEach(supplier => {
+        const option = document.createElement('option');
+        option.value = supplier;
+        option.textContent = supplier;
+        supplierSelect.appendChild(option);
+    });
+}
+
+// Function to calculate total cost
+function calculateTotal() {
+    const pricePerUnit = {
+        "Supplier A": 20,
+        "Supplier B": 22,
+        "Supplier C": 18
+    };
+    const quantity = document.getElementById('quantity').value;
+    const supplier = document.getElementById('supplier').value;
+    const total = pricePerUnit[supplier] * quantity;
+    document.getElementById('totalCost').value = total.toFixed(2);
+}
+</script>
+</head>
+<body>
+<h1>Bakery Inventory Management System</h1>
+<form id="inventoryForm">
+    <label for="product">Select Product:</label>
+    <select id="product" name="product" onchange="updateSuppliers()">
+        <option value="Flour">Flour</option>
+        <option value="Sugar">Sugar</option>
+        <option value="Butter">Butter</option>
+    </select>
+    
+    <label for="supplier">Select Supplier:</label>
+    <select id="supplier" name="supplier"></select>
+    
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" oninput="calculateTotal()" min="1" value="1">
+    
+    <label for="totalCost">Total Cost ($):</label>
+    <input type="text" id="totalCost" name="totalCost" readonly>
+    
+    <button type="submit">Buy</button>
+</form>
+
+<script>
+// Initialize suppliers for the default selected product
+updateSuppliers();
+</script>
+</body>
+</html>

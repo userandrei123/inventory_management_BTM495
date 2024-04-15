@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table-actions {
+            cursor: pointer;
+        }
+        .table-actions:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-3">
+    <h2 class="mb-3">Suppliers</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">ID</th>
+                <th scope="col">Products List</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Supplier Name</td>
+                <td>Supplier Address</td>
+                <td>Supplier Email</td>
+                <td>Supplier ID</td>
+                <td><button class="btn btn-link">View Products</button></td>
+                <td>
+                    <i class="bi bi-pencil table-actions"></i>
+                    <i class="bi bi-trash table-actions"></i>
+                </td>
+            </tr>
+            <!-- Repeat for other suppliers -->
+        </tbody>
+    </table>
+    <button class="btn btn-primary" onclick="location.href='add-supplier.html'">Add Supplier</button>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

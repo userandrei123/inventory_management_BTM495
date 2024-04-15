@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Supplier</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .form-label-group {
+            display: block;
+        }
+        .radio-group {
+            padding: 7px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="mb-3 text-center">Create Supplier</h2>
+    <form>
+        <div class="form-label-group">
+            <input type="text" id="name" class="form-control" placeholder="Name" required>
+        </div>
+        <div class="form-label-group">
+            <input type="tel" id="phone" class="form-control" placeholder="Phone Number" required>
+        </div>
+        <div class="form-label-group">
+            <input type="email" id="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="form-label-group">
+            <input type="text" id="address" class="form-control" placeholder="Address" required>
+        </div>
+        <div class="form-label-group">
+            <input type="text" id="postal-code" class="form-control" placeholder="Postal Code" required>
+        </div>
+        <div class="form-label-group">
+            <input type="text" id="id" class="form-control" placeholder="ID" required>
+        </div>
+        <div class="form-label-group">
+            <input type="text" id="products" class="form-control" placeholder="Products" required>
+        </div>
+
+        <div class="d-grid gap-2 mt-4">
+            <button type="submit" class="btn btn-primary">Add Supplier</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="history.back()">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
