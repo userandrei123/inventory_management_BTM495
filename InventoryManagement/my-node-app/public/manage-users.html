@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>User Management</h2>
+        <div>
+            <button class="btn btn-primary me-2">Add New User</button>
+            <button class="btn btn-secondary me-2">Modify User</button>
+            <button class="btn btn-danger">Delete User</button>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Example user card -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" style="width: 150px; height: 150px; border-radius: 50%;" alt="User Avatar">
+                <div class="card-body">
+                    <h5 class="card-title">Jason Price</h5>
+                    <p class="card-text">janick.parisian@yahoo.com</p>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat user cards for each user -->
+    </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

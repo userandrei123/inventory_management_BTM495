@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Overview</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            padding-top: 20px;
+        }
+        .table-responsive {
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .table {
+            margin-bottom: 0;
+        }
+        .tab-row {
+            margin-bottom: 15px;
+        }
+        .tab-link {
+            text-decoration: none;
+            padding: 8px 15px;
+            display: inline-block;
+            border-radius: 5px 5px 0 0;
+            background-color: #f8f9fa;
+            margin-right: 5px;
+            color: #333;
+            border: 1px solid #ddd;
+            border-bottom: none;
+        }
+        .tab-link.active {
+            background-color: #fff;
+            color: #000;
+            border-color: #ddd #ddd #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="tab-row">
+        <a href="#" class="tab-link active">All</a>
+        <a href="#" class="tab-link">Status</a>
+        <a href="#" class="tab-link">Sales Data</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Items</th>
+                    <th scope="col">Price/Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Milk (1L)</td>
+                    <td>25</td>
+                    <td>$4.00</td>
+                </tr>
+                <!-- More rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
